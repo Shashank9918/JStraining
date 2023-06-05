@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Shashank Reddy Desham</title>
+    </head>
+    <body>
+        <div id="demo"></div>
+        <script>
+           let hobbies = ["sports","books","travel"]
+           let hobby = ""
+           console.log("hiii")
+
+           function hobbiesDisplay() {
+            console.log("his")
+            for (let i=0;i<hobbies.length;i++){
+                hobby = hobby+ hobbies[i];
+            }
+            }
+            function addHobby (hobby) {
+              hobbies.push(hobby);
+
+
+            }
+            function deleteHobby(hobby) {
+              let index = hobbies.indexOf(hobby)
+              hobbies.splice(index,1)
+
+            }
+            
+            deleteHobby("travel")
+            console.log("hi")
+            hobbiesDisplay()
+            console.log(hobby)
+            document.getElementById("demo").innerHTML = hobbies;
+           
+        </script>
+
+    </body>
+</html>
