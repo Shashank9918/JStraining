@@ -8,10 +8,10 @@
         <script>
            let hobbies = ["sports","books","travel"]
            let hobby = ""
-           console.log("hiii")
+           
 
            function hobbiesDisplay() {
-            console.log("his")
+            
             for (let i=0;i<hobbies.length;i++){
                 hobby = hobby+ hobbies[i];
             }
@@ -28,7 +28,8 @@
             }
             
             deleteHobby("travel")
-            console.log("hi")
+            addHobby("swimming")
+            
             hobbiesDisplay()
             console.log(hobby)
             document.getElementById("demo").innerHTML = hobbies;
