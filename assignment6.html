@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Shashank Reddy Desham</title>
+    </head>
+    <body>
+       <form id="form">
+        <div style="padding-bottom : 20px;">
+        <label>First Name</label>
+        <input id = "first_name" type="text" required/>
+        <br/>
+        </div>
+        <div style="padding-bottom : 20px;">
+        <label>Last Name</label>
+        <input id = "last_name" type="text" required/>
+        <br/>
+                </div>
+
+        <div style="padding-bottom : 20px;">
+        <label>DOB</label>
+        <input id = "dob" type="date" required/>
+         <br/>
+         </div>
+
+         <div style="padding-bottom : 20px;">
+            <label>Phone Number</label>
+            <input id = "phone_number" type="text" required/>
+             <br/>
+             </div>
+             <div style="padding-bottom: 20px;">
+                <label>Hobbies</label>
+                <br/>
+                <input type="checkbox" class="hobbies" id="hobby1" name="hobby1" value="Biking">
+                <label for="hobby1"> Biking</label><br>
+                <input type="checkbox" class="hobbies" id="hobby2" name="hobby2" value="Swimming">
+                <label for="hobby2"> Swimming</label><br>
+                <input type="checkbox" class="hobbies" id="hobby3" name="hobby3" value="Reading">
+                <label for="hobby3"> Reading</label><br>
+                <br/>
+            </div>
+            <input type="submit" value="Submit" />
+        </form>
+    </div>
+    <div id="demo">
+    
+    
+    </div>
+    <script>
+        var form = document.getElementById("form");
+    
+        var first_name;
+        var checkedValue = " "; 
+        var inputElements = document.getElementsByClassName('hobbies');
+        
+        
+    
+        form.addEventListener("submit",function(event){
+        event.preventDefault();
+        first_name = document.getElementById("first_name").value
+        var last_name = document.getElementById("last_name").value
+        var dob = document.getElementById("dob").value
+        var phone = document.getElementById("phone_number").value
+         let i=0;
+        while(i<inputElements.length){
+          if(inputElements[i].checked){
+               checkedValue += " " + inputElements[i].value;
+          }
+          i++;
+        }
+        document.getElementById("demo").innerHTML = first_name + "<br />" + last_name + "<br />" + dob +"<br />" + phone + "<br />" + checkedValue;
+       })
+       
+        // document.getElementById("demo").innerHTML = hobbies;
+    
+    </script>
+    </body>
+    </html>
